@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Puzzle</title>
+    <style type="text/css">
+        body{
+            width: 40%;
+            margin-left: 20%;
+        }
+        img{
+            width : 100%;
+            height : 150px;
+            margin : 5px;
+        }
+    </style>
+</head>
+<body onload="randomanh()">
+    <div style="text-align: center" id="chinhstyle">
+        <img src="funny-cat1_part1x1.jpg" id="anh1" style="box-shadow: black 2px 3px 3px;" onclick="changeImg1()">
+        <img src="funny-cat1_part2x1.jpg" id="anh2" style="box-shadow: black 2px 3px 3px;" onclick="changeImg2()">
+        <img src="funny-cat1_part3x1.jpg" id="anh3" style="box-shadow: black 2px 3px 3px;" onclick="changeImg3()">
+        <img src="funny-cat1_part4x1.jpg" id="anh4" style="box-shadow: black 2px 3px 3px;" onclick="changeImg4()">
+        <img src="funny-cat1_part5x1.jpg" id="anh5" style="box-shadow: black 2px 3px 3px;" onclick="changeImg5()">
+    </div>
+    <script>
+        function changeImg1() {
+            if (document.getElementById("anh1").getAttribute("src") === "funny-cat1_part1x1.jpg"){
+                document.getElementById("anh1").setAttribute("src","monkey_part1x1.jpg");
+            }else if (document.getElementById("anh1").getAttribute("src") === "monkey_part1x1.jpg"){
+                document.getElementById("anh1").setAttribute("src","panda_swap_part1x1.jpg");
+            }else if (document.getElementById("anh1").getAttribute("src") === "panda_swap_part1x1.jpg"){
+                document.getElementById("anh1").setAttribute("src","funny-cat1_part1x1.jpg");
+            }
+            kiemtra();
+        }
+        function changeImg2() {
+
+            if (document.getElementById("anh2").getAttribute("src") === "funny-cat1_part2x1.jpg"){
+                document.getElementById("anh2").setAttribute("src","monkey_part2x1.jpg");
+            }else if (document.getElementById("anh2").getAttribute("src") === "monkey_part2x1.jpg"){
+                document.getElementById("anh2").setAttribute("src","panda_swap_part2x1.jpg");
+            }else if (document.getElementById("anh2").getAttribute("src") === "panda_swap_part2x1.jpg"){
+                document.getElementById("anh2").setAttribute("src","funny-cat1_part2x1.jpg");
+            }
+            kiemtra();
+        }
+        function changeImg3() {
+            if (document.getElementById("anh3").getAttribute("src") === "funny-cat1_part3x1.jpg"){
+                document.getElementById("anh3").setAttribute("src","monkey_part3x1.jpg");
+            }else if (document.getElementById("anh3").getAttribute("src") === "monkey_part3x1.jpg"){
+                document.getElementById("anh3").setAttribute("src","panda_swap_part3x1.jpg");
+            }else if (document.getElementById("anh3").getAttribute("src") === "panda_swap_part3x1.jpg"){
+                document.getElementById("anh3").setAttribute("src","funny-cat1_part3x1.jpg");
+            }
+            kiemtra();
+        }
+        function changeImg4() {
+            if (document.getElementById("anh4").getAttribute("src") === "funny-cat1_part4x1.jpg"){
+                document.getElementById("anh4").setAttribute("src","monkey_part4x1.jpg");
+            }else if (document.getElementById("anh4").getAttribute("src") === "monkey_part4x1.jpg"){
+                document.getElementById("anh4").setAttribute("src","panda_swap_part4x1.jpg");
+            }else if (document.getElementById("anh4").getAttribute("src") === "panda_swap_part4x1.jpg"){
+                document.getElementById("anh4").setAttribute("src","funny-cat1_part4x1.jpg");
+            }
+            kiemtra();
+        }
+        function changeImg5() {
+            if (document.getElementById("anh5").getAttribute("src") === "funny-cat1_part5x1.jpg"){
+                document.getElementById("anh5").setAttribute("src","monkey_part5x1.jpg");
+            }else if (document.getElementById("anh5").getAttribute("src") === "monkey_part5x1.jpg"){
+                document.getElementById("anh5").setAttribute("src","panda_swap_part5x1.jpg");
+            }else if (document.getElementById("anh5").getAttribute("src") === "panda_swap_part5x1.jpg"){
+                document.getElementById("anh5").setAttribute("src","funny-cat1_part5x1.jpg");
+            }
+            kiemtra();
+        }
+        function kiemtra() {
+            kiemtra1 = document.getElementById("anh1").getAttribute("src");
+            kiemtra2 = document.getElementById("anh2").getAttribute("src");
+            kiemtra3 = document.getElementById("anh3").getAttribute("src");
+            kiemtra4 = document.getElementById("anh4").getAttribute("src");
+            kiemtra5 = document.getElementById("anh5").getAttribute("src");
+            if (kiemtra1 == "monkey_part1x1.jpg" && kiemtra2 == "monkey_part2x1.jpg" && kiemtra3 == "monkey_part3x1.jpg" && kiemtra4 == "monkey_part4x1.jpg" && kiemtra5 == "monkey_part5x1.jpg"){
+                document.getElementById("anh1").style = "box-shadow: red 2px 3px 3px";
+                document.getElementById("anh2").style = "box-shadow: red 2px 3px 3px";
+                document.getElementById("anh3").style = "box-shadow: red 2px 3px 3px";
+                document.getElementById("anh4").style = "box-shadow: red 2px 3px 3px";
+                document.getElementById("anh5").style = "box-shadow: red 2px 3px 3px";
+            }else if (kiemtra1 == "panda_swap_part1x1.jpg" && kiemtra2 == "panda_swap_part2x1.jpg" && kiemtra3 == "panda_swap_part3x1.jpg" && kiemtra4 == "panda_swap_part4x1.jpg" && kiemtra5 == "panda_swap_part5x1.jpg"){
+                document.getElementById("anh1").style = "box-shadow: red 2px 3px 3px";
+                document.getElementById("anh2").style = "box-shadow: red 2px 3px 3px";
+                document.getElementById("anh3").style = "box-shadow: red 2px 3px 3px";
+                document.getElementById("anh4").style = "box-shadow: red 2px 3px 3px";
+                document.getElementById("anh5").style = "box-shadow: red 2px 3px 3px";
+            }else if (kiemtra1 == "funny-cat1_part1x1.jpg" && kiemtra2 == "funny-cat1_part2x1.jpg" && kiemtra3 == "funny-cat1_part3x1.jpg" && kiemtra4 == "funny-cat1_part4x1.jpg" && kiemtra5 == "funny-cat1_part5x1.jpg"){
+                document.getElementById("anh1").style = "box-shadow: red 2px 3px 3px";
+                document.getElementById("anh2").style = "box-shadow: red 2px 3px 3px";
+                document.getElementById("anh3").style = "box-shadow: red 2px 3px 3px";
+                document.getElementById("anh4").style = "box-shadow: red 2px 3px 3px";
+                document.getElementById("anh5").style = "box-shadow: red 2px 3px 3px";
+            }else {
+                document.getElementById("anh1").style = "box-shadow: black 2px 3px 3px";
+                document.getElementById("anh2").style = "box-shadow: black 2px 3px 3px";
+                document.getElementById("anh3").style = "box-shadow: black 2px 3px 3px";
+                document.getElementById("anh4").style = "box-shadow: black 2px 3px 3px";
+                document.getElementById("anh5").style = "box-shadow: black 2px 3px 3px";
+            }
+        }
+        function randomanh() {
+            let myArray1 = ['monkey_part1x1.jpg','panda_swap_part1x1.jpg','funny-cat1_part1x1.jpg'];
+            var rand1 = myArray1[Math.floor(Math.random() * myArray1.length)];
+            document.getElementById("anh1").setAttribute("src",rand1);
+            let myArray2 = ['monkey_part2x1.jpg','panda_swap_part2x1.jpg','funny-cat1_part2x1.jpg'];
+            var rand2 = myArray2[Math.floor(Math.random() * myArray2.length)];
+            document.getElementById("anh2").setAttribute("src",rand2);
+            let myArray3 = ['monkey_part3x1.jpg','panda_swap_part3x1.jpg','funny-cat1_part3x1.jpg'];
+            var rand3 = myArray3[Math.floor(Math.random() * myArray3.length)];
+            document.getElementById("anh3").setAttribute("src",rand3);
+            let myArray4 = ['monkey_part4x1.jpg','panda_swap_part4x1.jpg','funny-cat1_part4x1.jpg'];
+            var rand4 = myArray4[Math.floor(Math.random() * myArray4.length)];
+            document.getElementById("anh4").setAttribute("src",rand4);
+            let myArray5 = ['monkey_part5x1.jpg','panda_swap_part5x1.jpg','funny-cat1_part5x1.jpg'];
+            var rand5 = myArray5[Math.floor(Math.random() * myArray5.length)];
+            document.getElementById("anh5").setAttribute("src",rand5);
+        }
+    </script>
+</body>
+</html>
